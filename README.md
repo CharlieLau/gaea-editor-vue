@@ -1,7 +1,7 @@
 # gaea-editor-vue
 
 ## demo
->  [demo](https://github.com/CharlieLau/gaea-editor-vue)
+>  [demo](https://charlielau.github.io/gaea-editor-vue)
 
 ## Installation
 
