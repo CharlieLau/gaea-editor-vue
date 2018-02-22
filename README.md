@@ -1,13 +1,16 @@
 # gaea-editor-vue
 
+## demo
+>  [demo](https://github.com/CharlieLau/gaea-editor-vue)
+
 ## Installation
 
 Install with yarn:
 
 ```sh
-$ yarn 
+$ yarn  add   gaea-editor-vue
 # or with npm:
-$ npm install
+$ npm install gaea-editor-vue
 ```
 
 ## Usage:
@@ -15,25 +18,15 @@ $ npm install
 Main.js:
 
 ```javascript
-import Vue from 'vue'
-import ElementUI from 'element-ui'
-import { VuePlugin } from 'vuera'
+//依赖vuex
+import store from './store/index';
+import GaeaEditor from 'gaea-editor-vue';
 
-
-import 'element-ui/lib/theme-chalk/index.css'
-import App from './App.vue'
-
-Vue.use(ElementUI)
-Vue.use(VuePlugin)
-
-new Vue({
-  el: '#app',
-  render: h => h(App)
-})
+Vue.use(GaeaEditor, {store});
 
 ```
 
-App.vue:
+component.vue:
 
 ```vue
 <template>
@@ -41,18 +34,10 @@ App.vue:
      <gaea-editor style="height:600px" />
   </div>
 </template>
-
 <script>
-import GaeaEditor from 'gaea-editor'
-export default {
-  components: {
-    GaeaEditor
-  }
-}
 </script>
 
 <style>
-
 </style>
 ```
 ## Refrence
