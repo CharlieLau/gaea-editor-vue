@@ -1,6 +1,6 @@
 {
   "name": "gaea-editor-vue",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "gaea-editor vue实现",
   "main": "dist/index.js",
   "scripts": {
