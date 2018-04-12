@@ -2,7 +2,7 @@
   "name": "gaea-editor-vue",
   "version": "0.0.3",
   "description": "gaea-editor vue实现",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=dev  webpack-dev-server --progress  --hot ",
