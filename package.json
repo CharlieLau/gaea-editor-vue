@@ -1,13 +1,13 @@
 {
   "name": "gaea-editor-vue",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "gaea-editor vue实现",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cross-env NODE_ENV=dev  webpack-dev-server --progress  --hot ",
     "docs": " rimraf  ./docs &  cross-env NODE_ENV=docs   webpack -p --progress  ",
-    "build":"rimraf ./dist &  cross-env NODE_ENV=build webpack -p --progress  "
+    "build": "rimraf ./dist &  cross-env NODE_ENV=build webpack -p --progress  "
   },
   "repository": {
     "type": "git",
