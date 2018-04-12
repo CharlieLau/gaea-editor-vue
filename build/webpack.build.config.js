@@ -18,7 +18,7 @@ function resolve (dir) {
 module.exports = {
     entry: {
         'index': './lib/index',
-        commons:['vue','iview','vue-router','vuex']
+        // commons:['vue','iview','vue-router','vuex']
     },
     output: {
         libraryTarget: "umd",
