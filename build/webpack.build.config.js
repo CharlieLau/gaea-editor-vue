@@ -36,9 +36,10 @@ module.exports = {
     externals:{
         vue:'Vue',
         iview: 'iview',
-        'vuex':'Vuex'
+        'vuex':'Vuex',
+        sortablejs:"sortablejs"
     },
-    devtool: '#source-map',    
+    // devtool: '#source-map',    
     module: {
         rules: [
             {
@@ -105,10 +106,10 @@ module.exports = {
                 NODE_ENV: '"production"'
             }
         }),
-        // new webpack.optimize.UglifyJsPlugin({
-        //     compress: {
-        //         warnings: false
-        //     }
-        // })
+        new webpack.optimize.UglifyJsPlugin({
+            compress: {
+                warnings: false
+            }
+        })
     ]
 };
