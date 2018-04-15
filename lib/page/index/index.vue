@@ -53,7 +53,7 @@
 import * as components from './index.style';
 
 // 加载内置插件及每个区块对应的key
-import {pluginsBelongKeys} from '../../service';
+import {SVC} from '../../service';
 // 加载组件库
 // 加载viewport
 import Viewport from '../viewport';
@@ -72,7 +72,7 @@ export default {
     },
     data () {
         return {
-            pluginsBelongKeys
+            pluginsBelongKeys: SVC.pluginsBelongKeys
         };
     },
     computed: {

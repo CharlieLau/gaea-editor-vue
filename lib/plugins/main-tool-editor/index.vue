@@ -21,7 +21,7 @@
 
 <script>
 import * as components from './style';
-import {pluginsBelongKeys} from '../../service';
+import {SVC} from '../../service';
 export default {
     components: {
         ...components
@@ -30,7 +30,7 @@ export default {
     name: 'main-tool-editor',
     data () {
         return {
-            pluginsBelongKeys
+            pluginsBelongKeys: SVC.pluginsBelongKeys
         };
     },
     computed: {

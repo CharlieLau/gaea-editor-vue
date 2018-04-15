@@ -18,7 +18,7 @@
 
 import * as components from './style';
 import * as _ from 'lodash';
-import {parseInputToOutRange} from '../../service';
+import {SVC} from '../../service';
 import {getStyle} from '../../service/dom';
 export default {
     components: {
@@ -80,7 +80,7 @@ export default {
             let _val = -1;
             let _setting = this.editor.data;
             if (_setting && _setting.outputRange) {
-                _val = parseInputToOutRange(val || 0, inputRange, outputRange);
+                _val = SVC.parseInputToOutRange(val || 0, inputRange, outputRange);
             }
             return _val;
         }

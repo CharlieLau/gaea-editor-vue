@@ -5,9 +5,12 @@
 <script>
 import Page from './page/index/index.vue';
 // 加载内置插件及每个区块对应的key
-import {sortedPlugins, pluginsBelongKeys} from './service';
+import {SVC} from './service';
 // 加载组件库
 import defaultComponentClass from './components';
+
+const pluginsBelongKeys = SVC.pluginsBelongKeys;
+const sortedPlugins = SVC.sortedPlugins;
 export default {
     components: {
         Page
@@ -20,7 +23,7 @@ export default {
         }
     },
     created () {
-        this.$store.commit('application/loadBuiltInPlugins', pluginsBelongKeys, sortedPlugins);
+        this.$store.commit('application/loadBuiltInPlugins', {pluginsBelongKeys, sortedPlugins});
         this.componentClasses.concat(defaultComponentClass).forEach(item => {
             this.$store.commit('application/addComponentClass', item);
         });

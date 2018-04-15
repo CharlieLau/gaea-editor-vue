@@ -33,12 +33,12 @@ module.exports = {
             'vue': 'vue/dist/vue.esm.js',
         }
     },
-    devtool: '#source-map',    
-    devServer: {
-        compress: true,
-        port: 8898,
-        inline: true,
+    externals:{
+        vue:'Vue',
+        iview: 'iview',
+        'vuex':'Vuex'
     },
+    devtool: '#source-map',    
     module: {
         rules: [
             {
@@ -96,14 +96,19 @@ module.exports = {
     },
     plugins: [
         new HappyPack({id: 'happybabel', loaders: ['babel-loader'], threadPool: happyThreadPool, verbose: true}),
-        new webpack
-            .optimize
-            .CommonsChunkPlugin({name: 'commons', filename: '[name].[hash].js'}),
-        new ExtractTextPlugin({filename: '[name].[contenthash:16].css', allChunks: true}),
+        // new webpack
+        //     .optimize
+        //     .CommonsChunkPlugin({name: 'commons', filename: '[name].[hash].js'}),
+        // new ExtractTextPlugin({filename: '[name].[contenthash:16].css', allChunks: true}),
         new webpack.DefinePlugin({
             'process.env': {
-                NODE_ENV: '"dev"'
+                NODE_ENV: '"production"'
             }
-        })
+        }),
+        // new webpack.optimize.UglifyJsPlugin({
+        //     compress: {
+        //         warnings: false
+        //     }
+        // })
     ]
 };

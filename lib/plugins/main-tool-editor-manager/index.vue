@@ -21,7 +21,7 @@
 
 <script>
 import * as components from './style';
-import { pluginsBelongKeys } from '../../service';
+import { SVC } from '../../service';
 import * as _ from 'lodash';
 
 export default {
@@ -54,7 +54,7 @@ export default {
     data () {
         return {
             instanceInfo: null,
-            pluginsBelongKeys
+            pluginsBelongKeys: SVC.pluginsBelongKeys
         };
     },
     methods: {
