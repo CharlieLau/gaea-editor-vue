@@ -40,6 +40,12 @@ component.vue:
 <style>
 </style>
 ```
+## 扩展开发
+
+```sh
+$ yarn run build 
+```
+
 ## Refrence
 
 >  [gaea-editor](https://github.com/ascoders/gaea-editor)
