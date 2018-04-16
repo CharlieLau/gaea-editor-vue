@@ -10,7 +10,6 @@ var happyThreadPool = HappyPack.ThreadPool({
 });
 const package = require('../package.json');
 
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 function resolve (dir) {
     return path.join(__dirname, dir);
 }
@@ -37,7 +36,9 @@ module.exports = {
         vue:'Vue',
         iview: 'iview',
         'vuex':'Vuex',
-        sortablejs:"sortablejs"
+        sortablejs:"sortablejs",
+        "vue-styled-components":"vue-styled-components",
+        "lodash":"lodash"
     },
     // devtool: '#source-map',    
     module: {
